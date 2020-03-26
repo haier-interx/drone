@@ -25,6 +25,10 @@ var migrations = []struct {
 		stmt: alterTableReposAddColumnNoPulls,
 	},
 	{
+		name: "alter-table-repos-add-column-no-pushes",
+		stmt: alterTableReposAddColumnNoPushes,
+	},
+	{
 		name: "alter-table-repos-add-column-cancel-pulls",
 		stmt: alterTableReposAddColumnCancelPulls,
 	},
@@ -292,6 +296,10 @@ ALTER TABLE repos ADD COLUMN repo_cancel_pulls BOOLEAN NOT NULL DEFAULT 0;
 
 var alterTableReposAddColumnCancelPush = `
 ALTER TABLE repos ADD COLUMN repo_cancel_push BOOLEAN NOT NULL DEFAULT 0;
+`
+
+var alterTableReposAddColumnNoPushes = `
+ALTER TABLE repos ADD COLUMN repo_no_pushes BOOLEAN NOT NULL DEFAULT 0;
 `
 
 //

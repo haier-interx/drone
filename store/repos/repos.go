@@ -287,6 +287,7 @@ SELECT
 ,repo_protected
 ,repo_no_forks
 ,repo_no_pulls
+,repo_no_pushes
 ,repo_cancel_pulls
 ,repo_cancel_push
 ,repo_synced
@@ -381,6 +382,7 @@ INSERT INTO repos (
 ,repo_protected
 ,repo_no_forks
 ,repo_no_pulls
+,repo_no_pushes
 ,repo_cancel_pulls
 ,repo_cancel_push
 ,repo_synced
@@ -410,6 +412,7 @@ INSERT INTO repos (
 ,:repo_protected
 ,:repo_no_forks
 ,:repo_no_pulls
+,:repo_no_pushes
 ,:repo_cancel_pulls
 ,:repo_cancel_push
 ,:repo_synced
@@ -457,6 +460,7 @@ UPDATE repos SET
 ,repo_protected = :repo_protected
 ,repo_no_forks = :repo_no_forks
 ,repo_no_pulls = :repo_no_pulls
+,repo_no_pushes = :repo_no_pushes
 ,repo_cancel_pulls = :repo_cancel_pulls
 ,repo_cancel_push = :repo_cancel_push
 ,repo_timeout = :repo_timeout
